@@ -1,0 +1,37 @@
+﻿html, body
+{
+    height: 100%;
+}
+
+body {
+    background: url('../images/background.png');
+}
+
+.container {
+    height: 100% ! important;
+    max-width: 600px;
+    background-color: #fff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.userSection {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.userLanguagesWrapper {
+    padding-bottom: 10px;
+}
+
+.languageLabel {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    white-space: inherit;
+}
+
+.userBlog > p {
+    word-break: break-all;
+}
+    

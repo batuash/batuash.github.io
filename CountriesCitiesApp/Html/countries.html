@@ -1,0 +1,17 @@
+﻿<div class="form-group">
+    <label for="countryName">Name</label>
+    <input id="countryName" name="countryName" class="form-control" type="text" ng-model="countryFormTxtInpt">
+    <input class="btn btn-success" type="button" ng-click="countryFormSubmit()" value="Create">
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Country</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in countries">
+            <td><a href="#/cities/{{item.ID}}">{{item.Name}}</a><a class="btn btn-primary pull-right" href="#/countries/edit/{{item.ID}}/{{item.Name}}">Edit</a></td>
+        </tr>    
+    </tbody>
+</table>

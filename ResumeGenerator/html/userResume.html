@@ -1,0 +1,30 @@
+﻿<div ng-show="!showForm">
+    <h1 class="text-center">{{error}}</h1>
+    <p class="text-center">please make sure that there are no typo errors in the input name, or verify that the input name is a registered github user</p>
+
+    <a href="#/home" class="btn btn-primary text-center col-sm-4 col-sm-offset-4">Back to main</a>
+</div>
+<div class="userInfo" ng-show="showForm">
+    <h1 class="text-center">{{userName}}</h1>
+    <p class="text-center">{{description}}</p>
+    <div class="userSection userProfile col-sm-12">
+        <h4 class="text-center">GitHub Profile</h4>
+        <p class="text-center">On GitHub since {{createdYear}}, {{userName}} is a developer based in {{userLocation}} with {{userRepos}} public repositories and {{userFollows}} followers.</p>
+    </div>
+    <div class="userSection col-sm-12">
+        <div class="userEmail col-sm-6">
+            <h4 class="text-center">Email</h4>
+            <p class="text-center">{{userEmail}}</p>
+        </div>
+        <div class="userBlog col-sm-6">
+            <h4 class="text-center">Website</h4>
+            <p class="text-center"><a href="http://{{userWebsite}}">{{userWebsite}}</a></p>
+        </div>
+    </div>
+    <div class="userSection userLanguages col-sm-12">
+        <h4 class="text-center">Languages</h4>
+        <div class="userLanguagesWrapper text-center col-sm-12">
+            <span ng-repeat="item in userData" class="label label-default languageLabel" ng-show="item.language != '' && item.language != null">{{item.language}} </span>
+        </div>
+    </div>
+</div>

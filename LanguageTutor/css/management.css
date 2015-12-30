@@ -1,0 +1,94 @@
+﻿.container 
+{
+    max-width: 500px;
+}
+
+.management.btn 
+{
+    padding: 2px 0px;
+}
+
+.management.btn.addBtn 
+{
+    float: none;
+    padding: 0;
+    padding-bottom: 15px;
+}
+
+.management.table
+{
+    margin-top: 15px;
+}
+
+.management.table, .management.table th  
+{
+    text-align: center;
+}
+
+.management.table td  
+{
+    vertical-align: middle;
+}
+
+.management.btn > a
+{
+    display: block;    
+}
+
+form.form.formCreate
+{
+    width: 100%;
+}
+
+.management.editBtn
+{
+    width: 203px;
+    margin: 0 auto;
+}
+
+.management.deleteForm form{
+    width: 141px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.management.deleteForm .panel-heading 
+{
+    text-align: center;
+}
+
+/*create style*/
+
+.panel.management.create 
+{
+    margin-top: 20px;
+}
+
+.panel > form 
+{
+    width: 80%;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+/*sm = tablets*/
+@media (min-width: 768px) {
+    .management.btn 
+    {
+        display: inline-block;
+        padding: 0px 5px;
+    }
+    
+    form.formCreate
+    {
+        width: 50%;
+    }
+}
+
+/*md = desktop*/
+@media (min-width: 992px) {
+}
+
+/*lg = large desktop*/
+@media (min-width: 1200px) {
+}

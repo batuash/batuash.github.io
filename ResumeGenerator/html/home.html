@@ -1,0 +1,12 @@
+﻿<h1>{{header}}</h1>
+<p>{{message}}</p><br>
+<form name="resumeGeneratorForm">
+    <div class="form-group">
+        <label for="txtInputName">User Name</label><br>
+        <input type="text" id="txtInputName" name="txtInputName" class="form-control"
+               ng-model="userName" required /><br>
+        <button type="button" class="btn btn-primary"
+                ng-disabled="resumeGeneratorForm.$invalid"
+                ng-click="generateUserResume()">Generate</button>
+    </div>
+</form>

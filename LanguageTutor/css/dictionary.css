@@ -1,0 +1,141 @@
+﻿/*xs = smartphones*/
+.dictionaryWrapper {
+    padding-top: 25px;  
+}
+
+.dictionary.originalWord, .dictionary.translatedWord {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    white-space: pre-line;
+}
+
+.dictionaryNaviguation .pageLine {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sideCaret {
+    display: block;
+    float: right;
+    font-weight: bold;
+    position: relative;
+    right: 10px;
+    color: #000;
+}
+
+.dictionary.sideCaret {
+    bottom: 85px;
+    font-size: 20px;
+    font-weight: normal;
+    right: 5px;
+}
+
+.indexWrapper li 
+{
+    padding: 0;
+    height: 60px;
+    font-size: 20px;
+}
+
+.dictionaryWrapper li 
+{
+    padding: 0;
+    margin: 0;
+}
+
+.listItem
+{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    padding-top: 15px;
+    color: #000;
+}
+
+.dictionaryBtn:hover
+{
+    color: #000;
+    text-decoration: none;
+    background-color: #CCE0FF;
+}
+
+.dictionaryBtn:active
+{
+    color: #000;
+    text-decoration: none;
+    background-color: #337ab7 !important;
+}
+
+.listItem.underLinedTicket {
+    text-decoration: underline;
+}
+
+.dictionaryItem 
+{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    padding-top: 10px;
+    color: #000 !important;
+    text-decoration: none !important;
+    cursor:pointer
+}
+
+.dictionaryItem:hover
+{
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+.dictionaryItem:active
+{
+    color: #000 !important;;
+    text-decoration: none !important;
+}
+
+div.dictionary .btnDef 
+{
+    position: relative;
+    right: 3px;
+}
+
+div.dictionary .btnBack 
+{
+    position: relative;
+    left: 3px;
+}
+
+.home.index.pagination 
+{
+    display: block;
+}
+
+.home.index.paginationWrapper 
+{
+    padding-bottom: 25px;
+}
+
+/*sm = tablets*/
+@media (min-width: 768px) {
+
+}
+
+/*md = desktop*/
+@media (min-width: 992px) {
+
+}
+
+/*lg = large desktop*/
+@media (min-width: 1200px) {
+
+}
+
+
