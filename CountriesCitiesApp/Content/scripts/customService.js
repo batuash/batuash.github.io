@@ -1,5 +1,5 @@
 ﻿(function () {
-    var serviceApiUrl = "http://46.121.27.40:8082";
+    var serviceApiUrl = "http://46.121.24.102:8082";
    
     var countriesService = function ($http) {
         var getCountries = function () {
