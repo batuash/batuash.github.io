@@ -1,7 +1,7 @@
 ﻿(function () {
     //service constructor
     var apiService = function ($http, $q) {
-        var serviceUrl = "http://46.121.26.8:8083";
+        var serviceUrl = "http://46.121.29.70:8083";
         var ticketsCollection = [];
 
         var getTickets = function () {

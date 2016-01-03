@@ -1,10 +1,10 @@
 ﻿(function () {
     var module = angular.module("app");
 
-    module.controller("ticketsController", function ($scope, $location, apiService, $cookies) {
+    module.controller("ticketsController", function ($scope, $location, apiService, cookiesService) {
         $scope.message = "hello";
         $scope.ticketCollection = "";
-        $scope.lastVisitedPageName = $cookies.get('lastVisitedTicket');
+        $scope.lastVisitedPageName = cookiesService.getCookie('lastVisitedTicket');
 
         var onFetchTicketsError = function (response) {
             $scope.error = "Could not fetch tickets";

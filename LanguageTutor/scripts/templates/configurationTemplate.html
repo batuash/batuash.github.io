@@ -1,0 +1,38 @@
+﻿<button type="button" class="btn btn-info btnDef col-xs-5 col-xs-offset-1 col-sm-3 col-sm-offset-3" data-toggle="modal" data-target="#configurationPopup">Configuration</button>
+<div id="configurationPopup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center">Playback Configuration</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="audioModeSelection">Audio:</label>
+                        <select id="audioModeSelection" ng-model="configService.audio" ng-options="mode.value for mode in configService.audioModes"
+                                class="btn btn-info col-xs-6 pull-right"></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="playModeSelection">Play:</label>
+                        <select id="playModeSelection" ng-model="configService.play" ng-options="mode.value for mode in configService.playModes"
+                                class="btn btn-info col-xs-6 pull-right"></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="repeatModeSelection">Repeat:</label>
+                        <select id="repeatModeSelection" ng-model="configService.repeat" ng-options="mode.value for mode in configService.repeatModes"
+                                class="btn btn-info col-xs-6 pull-right"></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="fadeInSpeedSelection">Fade speed:</label>
+                        <input type="number" id="fadeInSpeedSelection" ng-model="configService.fadeInSpeed.value" min="500" max="5000" step="50" class="col-xs-6 pull-right">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="slideShowSpeedSelection">Play speed:</label>
+                        <input type="number" id="slideShowSpeedSelection" ng-model="configService.playSpeed.value" min="1000" max="10000" step="100" class="col-xs-6 pull-right">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

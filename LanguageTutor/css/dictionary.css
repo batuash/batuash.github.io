@@ -123,6 +123,21 @@ div.dictionary .btnBack
     padding-bottom: 25px;
 }
 
+/*configuration style*/
+.modal-dialog {
+    max-width: 300px;
+}
+
+.modal-header {
+    background-color: #337ab7;
+    color:#fff;
+}
+
+.form-horizontal .form-group {
+     margin-right: 0; 
+     margin-left: 0; 
+}
+
 /*sm = tablets*/
 @media (min-width: 768px) {
 

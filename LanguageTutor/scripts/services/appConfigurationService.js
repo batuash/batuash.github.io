@@ -3,32 +3,65 @@
     var appConfigurationService = function () {
 
         var audioModes = {
-            "mute": { 'value': 'Mute' },
-            "play": { 'value': 'Play' }
+            "of": { 'value': 'Of' },
+            "on": { 'value': 'On' }
         };
 
-        var audioMode = audioModes.mute;
+        var audio = audioModes.of;
 
         var playModes = {
-            "noPlay": {'value':'No Play'},
+            "of": { 'value': 'Of' },
+            "auto": { 'value': 'Auto' }
+        };
+
+        var play = playModes.of;
+
+        var repeatModes = {
             "repeatCard": { 'value': 'Repeat Card' },
             "repeatAll": { 'value': 'Repeat All' }
         };
 
-        var playMode = playModes.noPlay;
+        var repeat = repeatModes.repeatAll;
 
         //card animation speed
-        var fadeInSpeed = 500;
-        //when in slide mode swich between cards speed
-        var slideShowSpeed = 1000;
+        var fadeInSpeed = {'value': 500};
+        //when in play mode, swich between cards speed
+        var playSpeed = { 'value': 1000 };
+
+        var getKeyFromObject = function (object, modes) {
+            for (key in modes) {
+                if (Object.is(modes[key], object)) {
+                    return key;
+                }
+            }
+
+            return undefined;
+        };
+
+        var getAudioKey = function (audio) {
+            return getKeyFromObject(audio, audioModes);
+        };
+
+        var getPlayKey = function (play) {
+            return getKeyFromObject(play, playModes);
+        };
+
+        var getRepeatKey = function (repeat) {
+            return getKeyFromObject(repeat, repeatModes);
+        };
 
         return {
             audioModes: audioModes,
-            audioMode: audioMode,
+            audio: audio,
             playModes: playModes,
-            playMode: playMode,
+            play: play,
+            repeatModes: repeatModes,
+            repeat: repeat,
             fadeInSpeed: fadeInSpeed,
-            slideShowSpeed: slideShowSpeed
+            playSpeed: playSpeed,
+            getAudioKey: getAudioKey,
+            getPlayKey: getPlayKey,
+            getRepeatKey: getRepeatKey
         };
     };
 

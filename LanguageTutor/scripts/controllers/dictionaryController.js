@@ -1,26 +1,13 @@
 ﻿(function () {
     var module = angular.module("app");
 
-    module.controller("dictionaryController", function ($scope, $routeParams, apiService, $cookies, $location, $interval, appConfigurationService) {
+    module.controller("dictionaryController", function ($scope, $routeParams, apiService, cookiesService, $location, $interval, appConfigurationService) {
         $scope.data = "";
         $scope.ogWord = "";
         $scope.translatedWord = "";
         $scope.index = 0;
         $scope.audioName = "";
         $scope.audioUrl = apiService.audioUrl;
-        $scope.audioMode = appConfigurationService.audioMode;
-        $scope.audioModes = appConfigurationService.audioModes;
-        $scope.playMode = appConfigurationService.playMode;
-        $scope.playModes = appConfigurationService.playModes;
-
-        //set the configurtion property according to the user pick
-        $scope.$watch('audioMode', function () {
-            appConfigurationService.audioMode = $scope.audioMode;
-        });
-
-        $scope.$watch('playMode', function () {
-            appConfigurationService.playMode = $scope.playMode;
-        });
 
         $scope.nextTicket = function () {
             $scope.index++;
@@ -33,15 +20,12 @@
             $scope.translatedWord = $scope.data[$scope.index].GERWORD;
             $scope.audioName = "";
 
-            //figure out what causes the exception here
-            if (Object.is($scope.playMode, $scope.playModes.noPlay))
-            {
-                $scope.$apply();
-            }
+            //todo:figure out what why apply is needed here
+            $scope.$apply();
         }
 
         var nextCard = function () {
-            if (Object.is($scope.playMode, $scope.playModes.repeatCard)) {
+            if (Object.is(appConfigurationService.repeat, appConfigurationService.repeatModes.repeatCard)) {
                 return;
             }
             apiService.getTickets().then(function (data) {
@@ -58,15 +42,9 @@
         }
 
         $scope.triggerAudio = function (event) {
-            //setAudioUrl($scope)
-            //var audio = new Audio($scope.audioUrl + $scope.audioName);
-            //audio.play();
-
-            
-            //var audio = new Audio("http://46.121.26.8:8083/Content/mp3/mai.mp3");
-            $scope.audio = new Audio();
-            $scope.audio.src = "http://46.121.26.8:8083/Content/mp3/mai.mp3";
-            $scope.audio.play();
+            setAudioUrl($scope)
+            var audio = new Audio($scope.audioUrl + $scope.audioName);
+            audio.play();
         }
 
         var onFetchDictionaryError = function (response) {
@@ -97,57 +75,6 @@
 
         //init
         apiService.getDictionary($routeParams.pageName).then(onFetchDictionaryComplete, onFetchDictionaryError);
-        var expireDate = new Date();
-        expireDate.setDate(expireDate.getDate() + 1);
-        $cookies.put('lastVisitedTicket', $routeParams.pageName, { 'expires': expireDate });
-    });
-
-    module.directive('myTicketAnimation', function ($interval, appConfigurationService) {
-        return {
-            restrict: 'E',
-            scope: { myNextTicket: '&', myTriggerAudio: '&', myPlayMode: '=' },
-            link: function (scope, element, attr) {
-
-                var sliderRef;
-                var clickAction = function () {
-                    scope.myTriggerAudio();
-                    //if (element.find('div.hiddenWord').css("opacity") == "0") {
-                        
-                    //    if (Object.is(appConfigurationService.audioMode, appConfigurationService.audioModes.play)) {
-                    //        //scope.myTriggerAudio();
-                    //    }
-                    //    element.find('div.hiddenWord').animate({ opacity: 1 }, appConfigurationService.fadeInSpeed);
-                    //    return false;
-                    //}
-                    //else if (element.find('div.hiddenWord').css("opacity") == "1") {
-                    //    element.find('div.hiddenWord').css("opacity", "0");
-                    //    scope.myNextTicket();
-                    //}
-                }
-                var stopSilde = function () {
-                    if (angular.isDefined(sliderRef)) {
-                        $interval.cancel(sliderRef);
-                        sliderRef = undefined;
-                    }
-                };
-
-                element.find('div.hiddenWord').css("opacity", "0");
-                element.on("click", clickAction);
-                scope.$watch('myPlayMode', function () {
-                    if (!Object.is(scope.myPlayMode, appConfigurationService.playModes.noPlay)) {
-                        stopSilde();
-                        sliderRef = $interval(clickAction, appConfigurationService.slideShowSpeed);
-                    }
-                    else {
-                        stopSilde();
-                    }
-                });
-
-                scope.$on('$destroy', function () {
-                    // Make sure that the interval is destroyed too
-                    stopSilde();
-                });
-            }
-        };
+        cookiesService.setCookie('lastVisitedTicket', $routeParams.pageName);
     });
 })();

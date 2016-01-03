@@ -1,7 +1,7 @@
 ﻿<div class="dictionaryWrapper">
     <ul class="list-group" >
         <li class="list-group-item">
-            <my-ticket-animation my-next-ticket="nextTicket()" my-trigger-audio="triggerAudio()" my-play-mode="playMode">
+            <my-ticket-animation my-next-ticket="nextTicket()" my-trigger-audio="triggerAudio()">
                 <div ng-click="nextWord()" class="dictionaryItem translateBtn">
                     <div class="dictionary originalWord">{{ogWord}}</div>
                     <div class="hiddenWord dictionary translatedWord">{{translatedWord}}</div>
@@ -11,10 +11,7 @@
         </li>
     </ul>
     <div class="dictionary translateBtnsWrapper">
-        <select ng-model="audioMode" ng-options="mode.value for mode in audioModes"
-                class="btn btn-info col-xs-6 col-xs-offset-3"></select>
-        <select ng-model="playMode" ng-options="mode.value for mode in playModes"
-                class="btn btn-info col-xs-6 col-xs-offset-3"></select>
-        <a href="#/tickets" class="btn btn-primary col-xs-6 col-xs-offset-3">Back to main</a>
+        <configuration-directive></configuration-directive>
+        <a href="#/tickets" class="btn btn-primary btnBack col-xs-5 col-sm-3">Back to main</a>
     </div>
 </div>
