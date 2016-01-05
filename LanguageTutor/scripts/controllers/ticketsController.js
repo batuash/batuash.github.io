@@ -2,8 +2,7 @@
     var module = angular.module("app");
 
     module.controller("ticketsController", function ($scope, $location, apiService, cookiesService) {
-        $scope.message = "hello";
-        $scope.ticketCollection = "";
+        $scope.itemsCollection = "";
         $scope.lastVisitedPageName = cookiesService.getCookie('lastVisitedTicket');
 
         var onFetchTicketsError = function (response) {
@@ -11,7 +10,7 @@
         };
 
         var onFetchTicketsComplete = function (data) {
-            $scope.ticketCollection = data;
+            $scope.itemsCollection = data;
         };
 
         apiService.getTickets().then(onFetchTicketsComplete, onFetchTicketsError);

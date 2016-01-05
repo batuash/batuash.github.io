@@ -1,0 +1,13 @@
+﻿<div class="text-center">
+    <ul class="pagination pagination-lg">
+        <li ng-class="{disabled: prevLabelDisabled}">
+            <a ng-click="naviguateToPage(selectedLabelInNaviguation - 1)">Prev</a>
+        </li>
+        <li ng-repeat="labelItem in labelsNaviguationCollection" ng-class="{active: labelItem == selectedLabelInNaviguation} ">
+            <a ng-click="naviguateToPage(labelItem)">{{labelItem}}</a>
+        </li>
+        <li ng-class="{disabled: nextLabelDisabled}">
+            <a ng-click="naviguateToPage(selectedLabelInNaviguation + 1)">Next</a>
+        </li>
+    </ul>
+</div>
