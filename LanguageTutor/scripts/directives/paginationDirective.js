@@ -14,31 +14,37 @@
                 scope.nextLabelDisabled = false;
 
                 //itemsCollection should be a property set on the controller to wrapp in a pagination
-                scope.$watch(function () { return scope.itemsCollection; }, function (itemsCollection) {
-                    if (scope.itemsCollection.length == 0)
+                scope.$watch(function () { return scope.itemsCollection; }, function (newValue, oldValue) {
+                    if (newValue === oldValue) {
                         return;
-                    scope.labelsInNaviguationCount = parseInt((itemsCollection.length + (scope.itemsPerPage - 1)) / (scope.itemsPerPage));
+                    }
+
+                    scope.labelsInNaviguationCount = parseInt((newValue.length + (scope.itemsPerPage - 1)) / (scope.itemsPerPage));
                     var lastNaviguationLabel = cookiesService.getCookie('lastNaviguationLabel');
                     scope.selectedLabelInNaviguation = (typeof(lastNaviguationLabel) == 'undefined') ? 1 : parseInt(lastNaviguationLabel);
                 });
 
-                scope.$watch(function () { return scope.selectedLabelInNaviguation; }, function (selectedLabelInNaviguation) {
+                scope.$watch(function () { return scope.selectedLabelInNaviguation; }, function (newValue, oldValue) {
+                    if (newValue === oldValue) {
+                        return;
+                    }
+
                     //save value in a cookie in the clients machine
-                    cookiesService.setCookie('lastNaviguationLabel', selectedLabelInNaviguation);
-                    scope.firstlabelsInNaviguation = scope.itemsPerPage * (selectedLabelInNaviguation - 1);
-                    scope.prevLabelDisabled = (selectedLabelInNaviguation == 1) ? true : false;
-                    scope.nextLabelDisabled = (selectedLabelInNaviguation == scope.labelsInNaviguationCount) ? true : false;
+                    cookiesService.setCookie('lastNaviguationLabel', newValue);
+                    scope.firstlabelsInNaviguation = scope.itemsPerPage * (newValue - 1);
+                    scope.prevLabelDisabled = (newValue == 1) ? true : false;
+                    scope.nextLabelDisabled = (newValue == scope.labelsInNaviguationCount) ? true : false;
 
                     //pagination values
                     var labelsInNaviguationStart, labelsInNaviguationEnd;
                     if (scope.labelsInNaviguationCount <= scope.labelsInNaviguation) {
                         labelsInNaviguationStart = 1;
                     }
-                    else if (selectedLabelInNaviguation + parseInt(scope.labelsInNaviguation / 2) > scope.labelsInNaviguationCount) {
+                    else if (newValue + parseInt(scope.labelsInNaviguation / 2) > scope.labelsInNaviguationCount) {
                         labelsInNaviguationStart = scope.labelsInNaviguationCount - (scope.labelsInNaviguation - 1);
                     }
                     else {
-                        labelsInNaviguationStart = (selectedLabelInNaviguation - parseInt(scope.labelsInNaviguation / 2) > 0) ? selectedLabelInNaviguation - parseInt(scope.labelsInNaviguation / 2) : 1;
+                        labelsInNaviguationStart = (newValue - parseInt(scope.labelsInNaviguation / 2) > 0) ? newValue - parseInt(scope.labelsInNaviguation / 2) : 1;
                     }
                     //label numbers that are showing is maximium = the value of 'labelsInNaviguation'
                     labelsInNaviguationEnd = Math.min(labelsInNaviguationStart + scope.labelsInNaviguation, scope.labelsInNaviguationCount + 1);
