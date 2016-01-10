@@ -7,7 +7,7 @@
                 templateUrl: "/LanguageTutor/html/tickets.html",
                 controller: "ticketsController"
             })
-            .when("/tickets", {
+            .when("/tickets/:webApiAddress?", {
                 templateUrl: "/LanguageTutor/html/tickets.html",
                 controller: "ticketsController"
             })
