@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trivago Sample Web Page</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="javascript/jquery-2.1.4.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class=" topMessage col-xs-12 text-center">
+            Wenn diese E-Mail nicht richtig angezeigt wird, bitte hier klicken.
+        </div>
+        <div class="topBar col-xs-12">
+            <div class=" topNavigation">
+                <span class="logoWrapper col-xs-12 col-sm-3">
+                    <a href="#">
+                        <img src="images/trivago_logo_moon_rgb_156.jpg" />
+                    </a>
+                </span>
+                <span class="topNavigationLinks col-xs-12 col-sm-4">
+                    <a href="#">NewsLetter</a> |
+                    <a href="#">Die Hotelsuche</a>
+                </span>
+            </div>
+            <div class=" topSearchBar">
+                <form class="form-inline col-xs-12" role="form">
+                    <span class="col-xs-6">
+                        <input value="Barcelona" class="userInptField form-control" type="text" />
+                    </span>
+                    <span class="searchDates col-xs-3">
+                        <input value="Mi.20.3-Do.21.03" class="form-control" type="text" disabled />
+                    </span>
+                    <span class="col-xs-6 col-sm-3">
+                        <input value="Suchen" class="btn btn-primary" type="button" />
+                    </span>
+                </form>
+            </div>
+        </div>
+        <div class=" topImage col-xs-12">
+            <img src="images/big_image.jpg" class="img-responsive" />
+        </div>
+        <div class=" bodyContent topDeals col-xs-12">
+            <h6 class="topDealsHeader">Top Deals</h6>
+            <div class="topDealsCollection">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="topDealsItem leftItem">
+                        <img src="images/cancun.jpg" />
+                        <div class="cityDetails">
+                            <div class="cityName">
+                                <img src="images/stars_5.jpg" />
+                                <span>Ibiza</span>
+                            </div>
+                            <div class="cityPrice">
+                                from
+                                <span class="priceWrapper">$85</span>
+                            </div>
+                        </div>
+                        <div class="viewBtnWrapper">
+                            <button class="btn btn-primary">View Hotels ></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="topDealsItem middleItem">
+                        <img src="images/cancun.jpg" />
+                        <div class="cityDetails">
+                            <div class="cityName">
+                                <img src="images/stars_5.jpg" />
+                                <span>Cancun</span>
+                            </div>
+                            <div class="cityPrice">
+                                from
+                                <span class="priceWrapper">$185</span>
+                            </div>
+                        </div>
+                        <div class="viewBtnWrapper">
+                            <button class="btn btn-primary">View Hotels ></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 thirdDeal">
+                    <div class="topDealsItem rightItem">
+                        <img src="images/cancun.jpg" />
+                        <div class="cityDetails">
+                            <div class="cityName">
+                                <img src="images/stars_5.jpg" />
+                                <span>Dubrovnik</span>
+                            </div>
+                            <div class="cityPrice">
+                                from
+                                <span class="priceWrapper">$85</span>
+                            </div>
+                        </div>
+                        <div class="viewBtnWrapper">
+                            <button class="btn btn-primary">View Hotels ></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-xs col-sm-4">
+                    <div class="topDealsItem leftItem">
+                        <img src="images/cancun.jpg" />
+                        <div class="cityDetails">
+                            <div class="cityName">
+                                <img src="images/stars_5.jpg" />
+                                <span>Florida</span>
+                            </div>
+                            <div class="cityPrice">
+                                from
+                                <span class="priceWrapper">$85</span>
+                            </div>
+                        </div>
+                        <div class="viewBtnWrapper">
+                            <button class="btn btn-primary">View Hotels ></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-xs col-sm-4">
+                    <div class="topDealsItem middleItem">
+                        <img src="images/cancun.jpg" />
+                        <div class="cityDetails">
+                            <div class="cityName">
+                                <img src="images/stars_5.jpg" />
+                                <span>Fuerteventura</span>
+                            </div>
+                            <div class="cityPrice">
+                                from
+                                <span class="priceWrapper">$185</span>
+                            </div>
+                        </div>
+                        <div class="viewBtnWrapper">
+                            <button class="btn btn-primary">View Hotels ></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-xs col-sm-4">
+                    <div class="topDealsItem rightItem">
+                        <img src="images/cancun.jpg" />
+                        <div class="cityDetails">
+                            <div class="cityName">
+                                <img src="images/stars_5.jpg" />
+                                <span>Dubai</span>
+                            </div>
+                            <div class="cityPrice">
+                                from
+                                <span class="priceWrapper">$85</span>
+                            </div>
+                        </div>
+                        <div class="viewBtnWrapper">
+                            <button class="btn btn-primary">View Hotels ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" bodyContent topCountries destinations hidden-xs col-xs-12">
+            <h6 class="destinationsHeader">Top Countries</h6>
+            <div class="destinationsCollection">
+                <div class="col-xs-6">
+                    <div class="destinationsItem leftItem">
+                        <div class="cityName">
+                            <img src="images/cancun.jpg" />
+                            Europe
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="destinationsItem rightItem">
+                        <div class="cityName">
+                            <img src="images/cancun.jpg" />
+                            USA
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$145</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" bodyContent otherDestinations destinations col-xs-12">
+            <h6 class="destinationsHeader">Other Destinations</h6>
+            <div class="destinationsCollection">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem leftItem">
+                        <div class="cityName">
+                            Rom
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem rightItem">
+                        <div class="cityName">
+                            New York City
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem leftItem">
+                        <div class="cityName">
+                            Berlin
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem rightItem">
+                        <div class="cityName">
+                            Moscow
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem leftItem">
+                        <div class="cityName">
+                            Paris
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem rightItem">
+                        <div class="cityName">
+                            Cebu
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem leftItem">
+                        <div class="cityName">
+                            Barcelona
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem rightItem">
+                        <div class="cityName">
+                            Miami
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem leftItem">
+                        <div class="cityName">
+                            Prag
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="destinationsItem rightItem">
+                        <div class="cityName">
+                            San Francisco
+                            <img src="images/stars_5.jpg" />
+                        </div>
+                        <div class="cityPrice">
+                            from
+                            <span class="priceWrapper">$85</span>
+                            <div class="btnWrapper">
+                                <button class="btn btn-primary">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" footer col-xs-12">
+            <div class="socielIcons">
+                <img src="images/facebook.jpg" />
+                <img src="images/google.jpg" />
+            </div>
+            <p>
+                www.trivago.com allows travelers to find their ideal hotel at the best price,
+                with a selection of power over 700,000 hotels and over 200 bookings sites worlswide.
+            </p>
+            <p>
+                © 2004 - 2014 All rights reserved.
+            </p>
+
+        </div>
+</body>
+</html>

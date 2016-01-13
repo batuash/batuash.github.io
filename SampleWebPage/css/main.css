@@ -1,0 +1,362 @@
+﻿/*xs = smartphones*/
+body {
+    background-color: #ddd;
+    line-height: 1.0;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*Top Page*/
+.topMessage {
+    font-size: 8px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: #999999;
+}
+
+.logoWrapper {
+
+}
+
+.topNavigation {
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+.logoImage {
+    background-image: url(../images/trivago_logo_moon_rgb_156.jpg);
+    width: 155px;
+    height: 46px;
+}
+
+.logoWrapper > a:hover {
+    text-decoration: none;
+}
+
+.topNavigationLinks {
+    margin-top: 5px;
+}
+
+.topNavigationLinks > a {
+    color: #999999;
+}
+
+.topBar {
+    padding-top: 10px;
+    border-top: 4px solid #2b71b8;
+    background-color: #fff;   
+    height: 140px;
+}
+
+.topSearchBar input {
+    width:100%;
+}
+
+.topSearchBar span {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.topSearchBar .userInptField {
+    font-weight: bold;
+}
+
+.topSearchBar form {
+    padding-top: 10px;
+}
+
+.topSearchBar .searchDates {
+    display: none;
+}
+
+.form-inline .form-control  {
+    width:100%;
+}
+
+.topImage {
+    padding: 0;
+}
+
+.topImage img {
+    width: 100%;
+}
+
+/*Top Deals*/
+.bodyContent.topDeals {
+    padding: 0;
+}
+
+.bodyContent .topDealsCollection > div {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.bodyContent .topDealsCollection > div.thirdDeal {
+    margin-bottom: 0;
+}
+
+.bodyContent .topDealsCollection > div.hidden-xs {
+    margin-bottom: 0;
+}
+
+.bodyContent h6 {
+    font-weight: bold;
+    color: #3970ab;  
+    text-align: center;
+}
+
+.bodyContent .topDealsCollection img {
+    width: 100%;
+}
+
+.bodyContent .topDealsCollection .cityName {
+    width: 110px;
+    float: left;
+    padding-left: 10px;
+}
+
+.bodyContent .topDealsCollection .cityName img {
+    width: 80px;
+}
+
+.bodyContent .topDealsCollection .cityPrice {
+    width: 35px;
+    float: right;
+    font-size: 11px;
+}
+
+.bodyContent .topDealsCollection .cityDetails {
+    padding-top: 10px;
+    color: #999999;
+}
+
+.bodyContent .priceWrapper {
+    color: #3bb92e;
+    font-size: 15px;
+}
+
+.bodyContent .topDealsCollection button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.bodyContent .topDealsCollection .viewBtnWrapper {
+    padding: 0 10px;
+}
+
+.bodyContent .topDealsCollection .topDealsItem {
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+
+.bodyContent .topDealsCollection .leftItem 
+{
+    margin-right: 0;
+}
+
+.bodyContent .topDealsCollection .middleItem 
+{
+    margin-right: 0;
+    position: static;
+    left: 0;
+}
+
+.bodyContent .topDealsCollection .rightItem 
+{
+    margin-left: 0;
+}
+
+/*Destinations*/
+.bodyContent.destinations {
+    padding: 0;
+}
+
+.bodyContent .destinationsCollection > div {
+    height: 47px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.bodyContent .destinationsCollection img {
+    width: 100px;
+    height: 45px;
+}
+
+.bodyContent .destinationsCollection .destinationsItem {
+    color: #999999;
+    background-color: #fff;
+}
+
+.bodyContent .destinationsCollection .cityName{
+    float: left;
+}
+
+.bodyContent .destinationsCollection .cityPrice {
+    float: right;
+    font-size: 11px;
+    padding-top: 13px;
+}
+
+.bodyContent .destinationsCollection .cityPrice .priceWrapper {
+    padding: 0 7px 0 5px;
+}
+
+.bodyContent .destinationsCollection .cityPrice .btnWrapper {
+    padding-right: 10px;
+}
+
+
+.bodyContent .destinationsCollection .cityPrice .btnWrapper{
+    float: right;
+    position: relative;
+    bottom: 3px;
+}
+
+.bodyContent .destinationsCollection .cityPrice .btnWrapper button{
+    padding: 0px 0px;
+    width: 20px;
+    height: 20px;
+}
+
+.bodyContent .destinationsCollection .leftItem 
+{
+    margin-right: 0;
+    background-color: #fff;
+    height: 100%;
+}
+
+.bodyContent .destinationsCollection .rightItem 
+{
+    margin-left: 0;
+    background-color: #fff;
+    height: 100%;
+}
+
+/*Top Countries*/
+.bodyContent.topDestinations {
+    padding: 0;
+}
+
+/*Other Destinations*/
+.bodyContent.otherDestinations {
+    padding: 0;
+}
+
+.bodyContent.otherDestinations .destinationsCollection .cityName {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.bodyContent.otherDestinations .destinationsCollection .cityName img {
+    width: 35px;
+    height: 10px;
+    margin-bottom: 5px;
+}
+
+/*Foter*/
+.footer {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.footer .socielIcons {
+    width: 55px;
+    margin: 0 auto;
+}
+
+.footer img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.footer p {
+    margin-top: 10px;
+    color: #999999;
+    font-size: 10px;
+}
+
+
+/*sm = tablets*/
+@media (min-width: 768px) {
+    .container {
+        width: 730px;
+    }
+
+    .form-inline .form-control  {
+        width:100%;
+    }
+
+    .topNavigationLinks {
+        margin-top: 20px;
+    }
+
+    .topSearchBar .searchDates {
+        display: inline;
+    }
+
+    .topBar {
+        padding-top: 10px;
+        border-top: 4px solid #2b71b8;
+        background-color: #fff;   
+        height: 120px;
+    }
+
+    .bodyContent h6 {
+        margin-left: 15px;
+        text-align: inherit;
+    }
+
+    .bodyContent .destinationsCollection .leftItem 
+    {
+        margin-right: 5px;
+    }
+
+    .bodyContent .destinationsCollection .rightItem 
+    {
+        margin-left: 5px;
+    }
+
+    .footer .socielIcons {
+        margin: 0;
+    }
+
+    .bodyContent .topDealsCollection .leftItem 
+    {
+        margin-right: 6px;
+    }
+
+    .bodyContent .topDealsCollection .middleItem 
+    {
+        margin-right: 6px;
+        position: relative;
+        left: 3px;
+    }
+
+    .bodyContent .topDealsCollection .rightItem 
+    {
+        margin-left: 6px;
+    }
+
+    .bodyContent .topDealsCollection > div.thirdDeal {
+        margin-bottom: 20px;
+    }
+}
+
+/*md = desktop*/
+@media (min-width: 992px) {
+    .form-inline .form-control  {
+        width:100%;
+    }
+}
+
+/*lg = large desktop*/
+@media (min-width: 1200px) {
+    .form-inline .form-control  {
+        width:100%;
+    }
+}
+
+
