@@ -1,0 +1,13 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Players List</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="player in players">
+            <td>{{player.Name}}<button class="btn btn-primary pull-right" ng-click="sendInvitation(player.Name)">Invite to game</button></td>
+        </tr>
+    </tbody>
+</table>
+<messages-popup-directive></messages-popup-directive>

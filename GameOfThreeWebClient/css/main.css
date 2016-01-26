@@ -1,0 +1,35 @@
+﻿/*xs = smartphones*/
+body {
+}
+
+.mainNav {
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.showCursor {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 600px;
+    height: 550px;
+    overflow-y: auto;
+}
+
+/*sm = tablets*/
+@media (min-width: 768px) {
+
+}
+
+/*md = desktop*/
+@media (min-width: 992px) {
+
+}
+
+/*lg = large desktop*/
+@media (min-width: 1200px) {
+
+}
+
+
