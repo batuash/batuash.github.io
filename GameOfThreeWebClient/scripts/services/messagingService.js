@@ -1,6 +1,6 @@
 ﻿(function () {
     var messagingService = function ($http, authenticationService) {
-        var webApiUrl = "http://127.0.0.1:8081";
+        var webApiUrl = "http://46.121.26.112:8084";
 
         var getMessages = function () {
             var userName = authenticationService.getCredentials().username;

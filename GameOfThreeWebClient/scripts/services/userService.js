@@ -1,6 +1,6 @@
 ﻿(function () {
     var userService = function ($http, authenticationService, $q) {
-        var webApiUrl = "http://127.0.0.1:8081";
+        var webApiUrl = "http://46.121.26.112:8084";
 
         var getCurrentUser = function () {
             return getUsers().then(function (response) {
