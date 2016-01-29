@@ -1,0 +1,155 @@
+body {
+  font-family: 'roboto', sans-serif;
+}
+
+p { text-align: center; }
+ .toggle, [id^=drop] {
+ display: none;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  background-color: #fff;
+}
+
+nav a {
+  display: block;
+  padding: 0 20px;
+  color: #8b8b8b;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+nav a:hover { 
+    background-color: #fff; 
+    color: #000;  
+    text-decoration: none; 
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+}
+
+nav ul li:hover > ul { display: inherit; }
+
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 170px;
+}
+
+li > a:after { content: ' +'; }
+
+li > a:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+
+    .toggle + a,
+     .menu { display: none; }
+
+    .toggle {
+      display: block;
+      padding: 0 20px;
+      color: #8b8b8b;
+      font-size: 20px;
+      line-height: 60px;
+      text-decoration: none;
+      border: none;
+    }
+
+    .toggle:hover { background-color: #fff; }
+
+    [id^=drop]:checked + ul { 
+        display: block; 
+    }
+
+    [id^=drop]:checked + form { 
+        display: block; 
+    }
+
+    [id^=drop] + form { 
+        display: none; 
+    }
+
+    nav ul li {
+      display: block;
+      width: 100%;
+    }
+
+    nav ul ul .toggle,
+     nav ul ul a { padding: 0 40px; }
+
+    nav ul ul ul a { padding: 0 80px; }
+
+    nav a:hover,
+     nav ul ul ul a { background-color: #fff; }
+
+    nav ul li ul li .toggle,
+     nav ul ul a { background-color: #fff; }
+
+    nav ul ul {
+      float: none;
+      position: static;
+      color: #8b8b8b;
+    }
+
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul { display: none; }
+
+    nav ul ul li {
+      display: block;
+      width: 100%;
+    }
+
+    nav ul ul ul li { 
+        position: static;
+    }
+
+    .categories-subheader {
+         display: block; 
+    }
+
+    .burger-container {
+        display: block;
+    }
+
+    .burger-container > label {
+        float: left;
+    }
+
+    .header .logo img {
+        padding-top: 5px;
+        max-width: 150px;
+    }
+}
+
+@media all and (max-width : 330px) {
+    nav ul li {
+      display: block;
+      width: 94%;
+    }
+}
