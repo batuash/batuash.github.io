@@ -8,14 +8,19 @@
     <script src="/CountriesCitiesApp/Scripts/jquery-2.1.4.min.js"></script>
     <script src="/CountriesCitiesApp/Scripts/angular.min.js"></script>
     <script src="/CountriesCitiesApp/Scripts/angular-route.min.js"></script>
+    <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+    <script src="/CountriesCitiesApp/Scripts/angular-cookies.min.js"></script>
     <script src="/CountriesCitiesApp/Scripts/bootstrap.min.js"></script>
     <script src="/CountriesCitiesApp/Content/scripts/app.js"></script>
     <script src="/CountriesCitiesApp/Content/scripts/countriesController.js"></script>
     <script src="/CountriesCitiesApp/Content/scripts/citiesController.js"></script>
     <script src="/CountriesCitiesApp/Content/scripts/customService.js"></script>
+    <script src="Content/scripts/loginController.js"></script>
+    <script src="Content/scripts/mainController.js"></script>
+    <script src="Content/scripts/registerController.js"></script>
+    <script src="Content/scripts/localStorageService.js"></script>
 </head>
 <body ng-app="app">
-    <h1></h1>
-    <div ng-view class="container"></div>
+    <div class="container" ui-view></div>
 </body>
 </html>

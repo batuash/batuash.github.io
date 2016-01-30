@@ -1,58 +1,58 @@
 ﻿(function () {
     var module = angular.module("app");
 
-    module.controller("citiesController", function ($scope, $http, $routeParams, citiesService) {
+    module.controller("citiesController", function ($scope, $http, $stateParams, webApiService) {
         $scope.cityFormTxtInpt = "";
 
         $scope.cityFormSubmit = function () {
-            citiesService.createCity($scope.cityFormTxtInpt, $routeParams.countryid).then(onCreateCityComplete, onCreateCityError);
+            webApiService.createCity($scope.cityFormTxtInpt, $stateParams.countryid).then(function (response) {
+                if (response.success) {
+                    refreshCities();
+                }
+                else {
+                    $scope.error = "Could not create city";
+                }
+            });
         }
 
-        var onUserComplete = function (data) {
-            $scope.cities = data;
+        var refreshCities = function () {
+            webApiService.getCities($stateParams.countryid).then(function (response) {
+                if (response.success) {
+                    $scope.cities = response.data;
+                }
+                else {
+                    $scope.error = "Could not fetch the data";
+                }
+            });
         };
 
-        var onError = function (response) {
-            $scope.error = "Could not fetch the data";
-        };
-
-        var onCreateCityComplete = function (data) {
-            citiesService.getCities($routeParams.countryid).then(onUserComplete, onError);
-        };
-
-        var onCreateCityError = function (response) {
-            $scope.error = "Could not create city";
-        };
-
-        citiesService.getCities($routeParams.countryid).then(onUserComplete, onError);
+        refreshCities();
     });
 
-    module.controller("editCityController", function ($scope, $routeParams, $location, citiesService) {
-        $scope.itemFormTxtInpt = $routeParams.cityName;
-        $scope.cancelBtnRef = "#/cities/" + $routeParams.countryId;
-
-        var onUpdateCityComplete = function (data) {
-            $location.path('/cities/' + $routeParams.countryId);
-        };
-
-        var onUpdateCityError = function (response) {
-            $scope.error = "Could not update city";
-        };
-
-        var onDeleteCityComplete = function (data) {
-            $location.path('/cities/' + $routeParams.countryId);
-        };
-
-        var onDeleteCityError = function (response) {
-            $scope.error = "Could not delete city";
-        };
+    module.controller("editCityController", function ($scope, $stateParams, $location, webApiService) {
+        $scope.itemFormTxtInpt = $stateParams.cityName;
+        $scope.cancelBtnRef = "#/cities/" + $stateParams.countryId;
 
         $scope.itemFormDelete = function () {
-            citiesService.deleteCity($routeParams.cityId).then(onDeleteCityComplete, onDeleteCityError);
+            webApiService.deleteCity($stateParams.cityId).then(function (response) {
+                if (response.success) {
+                    $location.path('/cities/' + $stateParams.countryId);
+                }
+                else {
+                    $scope.error = "Could not delete city";
+                }
+            });
         };
 
         $scope.itemFormUpdate = function () {
-            citiesService.updateCity($routeParams.cityId, $scope.itemFormTxtInpt, $routeParams.countryId).then(onUpdateCityComplete, onUpdateCityError);
+            webApiService.updateCity($stateParams.cityId, $scope.itemFormTxtInpt, $stateParams.countryId).then(function (response) {
+                if (response.success) {
+                    $location.path('/cities/' + $stateParams.countryId);
+                }
+                else {
+                    $scope.error = "Could not update city";
+                }
+            });
         };
     });
 })();

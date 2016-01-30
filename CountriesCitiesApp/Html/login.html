@@ -1,0 +1,22 @@
+﻿<div>
+    <h2>Login</h2>
+    <form name="form" role="form" ng-submit="login()" novalidate>
+        <div class="form-group" ng-class="{ 'has-error': (form.username.$dirty && form.username.$error.required) || (form.username.$touched && form.username.$error.minlength) }">
+            <label for="username">Name</label>
+            <input type="text" name="username" id="username" class="form-control" ng-model="userName" placeholder="Name" ng-minlength="4" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Name is required</span>
+            <span ng-show="form.username.$touched && form.username.$error.minlength" class="help-block">user name length is minimum 5</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': (form.userpassword.$dirty && form.userpassword.$error.required) || (form.userpassword.$touched && form.userpassword.$error.minlength)}">
+            <label for="userpassword">Password</label>
+            <input type="password" name="userpassword" id="userpassword" class="form-control" ng-model="userPassword" placeholder="Password" ng-minlength="5" required />
+            <span ng-show="form.userpassword.$dirty && form.userpassword.$error.required" class="help-block">Password is required</span>
+            <span ng-show="form.userpassword.$touched && form.userpassword.$error.minlength" class="help-block">password length is minimum 5</span>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Login</button>
+            <a href="#/register" class="btn btn-link">Dont have an account? Register here!</a>
+            <span ng-show="loginMessage" class="help-block">{{loginMessage}}</span>
+        </div>
+    </form>
+</div>
