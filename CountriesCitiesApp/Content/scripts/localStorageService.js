@@ -16,7 +16,7 @@
 
         var createUser = function (name, password) {
             var users = getUsersData();
-            var filtered = $filter('filter')(gusers, { Name: name });
+            var filtered = $filter('filter')(users, { Name: name });
             var user = filtered[0];
             if (user) {
                 return $q.reject({ status: 409 });
