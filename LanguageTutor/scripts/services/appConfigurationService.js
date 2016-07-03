@@ -17,7 +17,7 @@
         var play = playModes.of;
 
         var repeatModes = {
-            "repeatCard": { 'value': 'Repeat Card' },
+            "repeatPage": { 'value': 'Repeat Page' },
             "repeatAll": { 'value': 'Repeat All' }
         };
 
@@ -50,6 +50,9 @@
             return getKeyFromObject(repeat, repeatModes);
         };
 
+        var requestConfig = { timeout: 30000 };
+
+
         return {
             audioModes: audioModes,
             audio: audio,
@@ -61,7 +64,8 @@
             playSpeed: playSpeed,
             getAudioKey: getAudioKey,
             getPlayKey: getPlayKey,
-            getRepeatKey: getRepeatKey
+            getRepeatKey: getRepeatKey,
+            requestConfig: requestConfig
         };
     };
 

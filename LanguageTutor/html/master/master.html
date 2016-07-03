@@ -1,0 +1,24 @@
+﻿<div>
+    <nav class="navbar navbar-default mainNav">
+        <div class="container-fluid">
+            <div class="navbar-header header-logo">
+                <a class="navbar-brand" href="#/dictionaries">LanguageTutorApp</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right header-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle showCursor" data-toggle="dropdown">
+                        {{userName}}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="showCursor" href="#/management/dictionaries">Management</a></li>
+                        <li><a class="showCursor" ng-click="signOut()">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div ui-view></div>
+</div>
+<div class="loading-icon" ng-show="blnIsLoading"></div>
+<div class="loading-background" ng-show="blnIsLoading"></div>

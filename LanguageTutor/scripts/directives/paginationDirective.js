@@ -1,6 +1,6 @@
 ﻿(function () {
     var module = angular.module('app');
-    module.directive('paginationDirective', ['cookiesService', 'apiService', function (cookiesService, apiService) {
+    module.directive('paginationDirective', ['apiService', function (apiService) {
         return {
             restrict: 'E',
             templateUrl: '/LanguageTutor/scripts/templates/paginationTemplate.html',
@@ -14,8 +14,10 @@
 
                 //itemsCollection should be a property set on the controller to wrapp in a pagination
                 scope.$watch(function () { return scope.itemsCollection; }, function (itemsCollection) {
+                    //todo: updated library here, save changes in the dev folder
+                    //todo: verify that if the (labelsInNaviguationCount <=1) no pagination
                     scope.labelsInNaviguationCount = parseInt((itemsCollection.length + (scope.itemsPerPage - 1)) / (scope.itemsPerPage));
-                    var lastNaviguationLabel = cookiesService.getCookie('lastNaviguationLabel');
+                    var lastNaviguationLabel = localStorage.lastNaviguationLabel;
                     scope.selectedLabelInNaviguation = (typeof(lastNaviguationLabel) == 'undefined') ? 1 : parseInt(lastNaviguationLabel);
                     updatePaginationValues();
                 });
@@ -29,7 +31,7 @@
 
                 var updatePaginationValues = function () {
                     //save value in a cookie in the clients machine
-                    cookiesService.setCookie('lastNaviguationLabel', scope.selectedLabelInNaviguation);
+                    localStorage.lastNaviguationLabel = scope.selectedLabelInNaviguation;
                     scope.firstlabelsInNaviguation = scope.itemsPerPage * (scope.selectedLabelInNaviguation - 1);
                     scope.prevLabelDisabled = (scope.selectedLabelInNaviguation == 1) ? true : false;
                     scope.nextLabelDisabled = (scope.selectedLabelInNaviguation == scope.labelsInNaviguationCount) ? true : false;

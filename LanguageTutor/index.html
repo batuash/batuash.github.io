@@ -7,7 +7,7 @@
     <!--Style sheet-->
     <link href="/LanguageTutor/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/LanguageTutor/css/main.css" rel="stylesheet" />
-    <link href="/LanguageTutor/css/dictionary.css" rel="stylesheet" />
+    <link href="/LanguageTutor/css/sentences.css" rel="stylesheet" />
     <link href="/LanguageTutor/css/management.css" rel="stylesheet" />
     <link href="/LanguageTutor/css/pagination.css" rel="stylesheet" />
     <!--Js libraries-->
@@ -16,24 +16,31 @@
     <script src="/LanguageTutor/scripts/angular.min.js"></script>
     <script src="/LanguageTutor/scripts/angular-route.min.js"></script>
     <script src="/LanguageTutor/scripts/angular-cookies.min.js"></script>
+    <script src="/LanguageTutor/scripts/angular-ui-router.min.js"></script>
     <!--Scripts-->
-    <script src="/LanguageTutor/scripts/main.js"></script>
     <script src="/LanguageTutor/scripts/app.js"></script>
     <!--Controlllers-->
-    <script src="/LanguageTutor/scripts/controllers/ticketsController.js"></script>
-    <script src="/LanguageTutor/scripts/controllers/dictionaryController.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/sentencesController.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/masterController.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/loginController.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/dictionariesController.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/registerController.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/pagesController.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/management/dictionariesManagement.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/management/pagesManagement.js"></script>
+    <script src="/LanguageTutor/scripts/controllers/management/sentencesManagement.js"></script>
     <!--Services-->
     <script src="/LanguageTutor/scripts/services/apiService.js"></script>
     <script src="/LanguageTutor/scripts/services/appConfigurationService.js"></script>
-    <script src="/LanguageTutor/scripts/services/cookiesService.js"></script>
     <script src="/LanguageTutor/scripts/services/localHttpService.js"></script>
+    <script src="/LanguageTutor/scripts/services/authenticationService.js"></script>
     <!--Directives-->
-    <script src="/LanguageTutor/scripts/directives/dictionaryDirective.js"></script>
+    <script src="/LanguageTutor/scripts/directives/sentenceAnimationDirective.js"></script>
     <script src="/LanguageTutor/scripts/directives/configurationDirective.js"></script>
     <script src="/LanguageTutor/scripts/directives/paginationDirective.js"></script>
 </head>
 <body ng-app="app">
-    <div class="container" ng-view>
+    <div class="container" ui-view>
     </div>
 </body>
 </html>

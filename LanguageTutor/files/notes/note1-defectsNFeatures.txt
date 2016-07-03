@@ -1,0 +1,18 @@
+1. add 'previous page' button
+2. transfer data between pages as state params, instead as url params 
+4. add pagination to all features
+5. management: after create delete the form values(to know you added some)
+6. loading icon while waiting for server
+7. hide header when in messages page
+8. pages should allow same name from different dictionaries.
+9. German language -> Card77, 
+"I'm just curious that's all" creates defects
+for now i changed the string to:  
+10. add remember me feature to the Login page
+11. playback button should be on the message page
+
+v. add time-out for all ajax requests 
+v. when next page is loading hide the sentence and buttons, when received data show everything.
+v. handle on delete cascade 
+v. make application multi linguistic(sql should be able to save UNICODE) 
+

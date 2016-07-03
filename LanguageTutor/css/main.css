@@ -3,8 +3,13 @@ body {
     background: url('../images/squairy_light.png');
 }
 
+.container 
+{
+    position: relative;
+    padding: 0;
+}
+
 .indexWrapper {
-     padding-top: 25px;  
      padding-bottom: 25px;  
 }
 
@@ -16,6 +21,46 @@ body {
     font-size: 25px;
 }
 
+.mainNav {
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.showCursor {
+    cursor: pointer;
+}
+
+.header-logo {
+    float: left;
+}
+
+.header-nav {
+    float: right !important;
+}
+
+.loading-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../images/ajax_processing.gif);
+    top: 0;
+    z-index: 999;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+    display: block;
+}
+
+.loading-background {
+    background-color: lightslategray;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 998;
+    display: block;
+}
 
 /*sm = tablets*/
 @media (min-width: 768px) {

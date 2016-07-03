@@ -1,0 +1,34 @@
+﻿<div class="indexWrapper">
+    <form name="form" role="form" ng-submit="dictionaryFormSubmit()" novalidate>
+        <div class="form-group" ng-class="{ 'has-error': form.dictionaryName.$dirty && (form.dictionaryName.$error.required || form.dictionaryName.$error.minlength || form.dictionaryName.$error.maxlength) }">
+            <label for="dictionaryName">Name</label>
+            <input id="dictionaryName" name="dictionaryName" class="form-control" type="text" ng-model="dictionaryName" placeholder="Enter a name for the dictionary" ng-minlength="5" ng-maxlength="50" required>
+            <span ng-show="form.dictionaryName.$dirty && form.dictionaryName.$error.required" class="help-block">Name is required</span>
+            <span ng-show="form.dictionaryName.$dirty && (form.dictionaryName.$error.minlength || form.dictionaryName.$error.maxlength)" class="help-block">dictionary name length must be between 5 and 50</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.dictionaryDesc.$dirty && (form.dictionaryDesc.$error.required || form.dictionaryDesc.$error.maxlength) }">
+            <label for="dictionaryDesc">Description</label>
+            <textarea id="dictionaryDesc" name="dictionaryDesc" class="form-control" ng-model="dictionaryDesc" placeholder="Enter a description for the dictionary" ng-maxlength="255"></textarea>
+            <span ng-show="form.dictionaryDesc.$dirty && form.dictionaryDesc.$error.maxlength" class="help-block">maximum allowed characters are 255</span>
+        </div>
+        <button type="submit" class="btn btn-success" ng-disabled="form.$invalid">Create</button>
+    </form>
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Dictionary</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="dictionary in dictionariesCollection">
+                <td>
+                    <a href="#/management/pages/{{dictionary.Id}}">
+                        {{dictionary.Name}}
+                    </a>
+                    <button class="btn btn-primary pull-right" ui-sref="master.editDictionary({dictionaryId: '{{dictionary.Id}}', dictionaryName: '{{dictionary.Name}}', dictionaryDesc: '{{dictionary.Description}}'})">Edit</button>  
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

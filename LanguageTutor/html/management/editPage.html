@@ -1,0 +1,11 @@
+﻿<form name="form" role="form" ng-submit="pageFormUpate()" novalidate>
+    <div class="form-group" ng-class="{ 'has-error': form.pageName.$dirty && (form.pageName.$error.required || form.pageName.$error.minlength || form.pageName.$error.maxlength) }">
+        <label for="pageName">Name</label>
+        <input id="pageName" name="pageName" class="form-control" type="text" ng-model="pageName" placeholder="Enter a name for the page" ng-minlength="5" ng-maxlength="25" required>
+        <span ng-show="form.pageName.$dirty && form.pageName.$error.required" class="help-block">Name is required</span>
+        <span ng-show="form.pageName.$dirty && (form.pageName.$error.minlength || form.pageName.$error.maxlength)" class="help-block">page name length must be between 5 and 25</span>
+    </div>
+    <button type="submit" class="btn btn-success" ng-disabled="form.$invalid">Save</button>
+    <input type="button" class="btn btn-danger" ng-click="pageFormDelete()" value="Delete">
+    <a class="btn btn-primary" href="#/management/pages/{{dictionaryId}}">Cancel</a>
+</form>

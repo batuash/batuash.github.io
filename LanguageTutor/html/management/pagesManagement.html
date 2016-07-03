@@ -1,0 +1,29 @@
+﻿<div class="indexWrapper">
+    <form name="form" role="form" ng-submit="pageFormSubmit()" novalidate>
+        <div class="form-group" ng-class="{ 'has-error': form.pageName.$dirty && (form.pageName.$error.required || form.pageName.$error.minlength || form.pageName.$error.maxlength) }">
+            <label for="pageName">Name</label>
+            <input id="pageName" name="pageName" class="form-control" type="text" ng-model="pageName" placeholder="Enter a name for the page" ng-minlength="5" ng-maxlength="25" required>
+            <span ng-show="form.pageName.$dirty && form.pageName.$error.required" class="help-block">Name is required</span>
+            <span ng-show="form.pageName.$dirty && (form.pageName.$error.minlength || form.pageName.$error.maxlength)" class="help-block">page name length must be between 5 and 25</span>
+        </div>
+        <button type="submit" class="btn btn-success" ng-disabled="form.$invalid">Create</button>
+    </form>
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Page</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="page in pagesCollection">
+                <td>
+                    <a href="#/management/sentences/{{page.Id}}">
+                        {{page.Name}}
+                    </a>
+                    <a class="btn btn-primary pull-right" ui-sref="master.editPage({ dictionaryId: '{{dictionaryId}}', pageId: '{{page.Id}}', pageName: '{{page.Name}}' })">Edit</a>  
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

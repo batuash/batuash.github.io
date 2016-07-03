@@ -1,0 +1,18 @@
+﻿<div class="sentencesWrapper">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <sentence-animation-directive my-next-sentence="nextSentence()" my-trigger-audio="triggerAudio()">
+                <div ng-click="nextWord()" class="dictionaryItem translateBtn">
+                    <div class="sentences originalWord">{{translation}}</div>
+                    <div class="hiddenWord sentences translation">{{sentence}}</div>
+                    <span class="sentences sideCaret">></span>
+                </div>
+            </sentence-animation-directive>
+        </li>
+    </ul>
+    <div class="sentences translateBtnsWrapper">
+        <configuration-directive></configuration-directive>
+        <a href="#/pages/{{dictionaryId}}" class="btn btn-primary btnBack col-xs-5 col-sm-3">Back to main</a>
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+﻿<div class="indexWrapper">
+    <form name="form" role="form" ng-submit="sentenceFormSubmit()" novalidate>
+        <div class="form-group" ng-class="{ 'has-error': form.sentence.$dirty && (form.sentence.$error.required || form.sentence.$error.maxlength) }">
+            <label for="sentence">Sentence</label>
+            <input id="sentence" name="sentence" class="form-control" type="text" ng-model="sentence" placeholder="Enter a sentence" ng-maxlength="75" required>
+            <span ng-show="form.sentence.$dirty && form.sentence.$error.required" class="help-block">Sentence is required</span>
+            <span ng-show="form.sentence.$dirty && form.sentence.$error.maxlength" class="help-block">Maximum allowed characters is 75</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.translation.$dirty && (form.translation.$error.required || form.translation.$error.maxlength) }">
+            <label for="translation">Translation</label>
+            <textarea id="translation" name="translation" class="form-control" ng-model="translation" placeholder="Enter a translation" ng-maxlength="75" required></textarea>
+            <span ng-show="form.translation.$dirty && form.translation.$error.required" class="help-block">Translation is required</span>
+            <span ng-show="form.translation.$dirty && form.translation.$error.maxlength" class="help-block">maximum allowed characters is 75</span>
+        </div>
+        <button type="submit" class="btn btn-success" ng-disabled="form.$invalid">Create</button>
+    </form>
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Sentence</td>
+                <td>Translation</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="sentence in sentencesCollection">
+                <td>{{sentence.Sentence1}}</td>
+                <td>
+                    {{sentence.Translation}}
+                </td>
+                <td>
+                    <button class="btn btn-primary pull-right" ui-sref="master.editSentence({pageId: '{{pageId}}', sentenceId: '{{sentence.Id}}', sentence: '{{sentence.Sentence1}}', translation: '{{sentence.Translation}}'})">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

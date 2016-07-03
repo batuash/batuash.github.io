@@ -1,0 +1,10 @@
+﻿<div class="indexWrapper">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="dictionary in dictionariesCollection">
+            <a href="#/pages/{{dictionary.Id}}" class="listItem dictionaryBtn">
+                {{dictionary.Name}}
+                <span class="sideCaret">></span>
+            </a>
+        </li>
+    </ul>
+</div>

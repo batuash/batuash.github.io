@@ -1,0 +1,22 @@
+﻿<div>
+    <h2>Register</h2>
+    <form name="form" role="form" ng-submit="register()" novalidate>
+        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && (form.username.$error.required || form.username.$error.minlength || form.username.$error.maxlength) }">
+            <label for="username">Name</label>
+            <input type="text" name="username" id="username" class="form-control" ng-model="userName" placeholder="Enter your name" ng-minlength="4" ng-maxlength="25" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Name is required</span>
+            <span ng-show="form.username.$dirty && (form.username.$error.minlength || form.username.$error.maxlength)" class="help-block">user name length must be between 4 and 25</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.userpassword.$dirty && (form.userpassword.$error.required || form.userpassword.$error.minlength || form.userpassword.$error.maxlength) }">
+            <label for="userpassword">Password</label>
+            <input type="password" name="userpassword" id="userpassword" class="form-control" ng-model="userPassword" placeholder="Enter your password" ng-minlength="4" ng-maxlength="25" required />
+            <span ng-show="form.userpassword.$dirty && form.userpassword.$error.required" class="help-block">Password is required</span>
+            <span ng-show="form.userpassword.$dirty && (form.userpassword.$error.minlength || form.userpassword.$error.maxlength)" class="help-block">password length must be between 4 and 25</span>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Register</button>
+            <a href="#/login/" class="btn btn-link">Back to login</a>
+            <span ng-show="registerMessage" class="help-block">{{registerMessage}}</span>
+        </div>
+    </form>
+</div>

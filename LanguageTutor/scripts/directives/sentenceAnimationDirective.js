@@ -1,10 +1,10 @@
 ﻿(function () {
     var module = angular.module("app");
 
-    module.directive('myTicketAnimation', function ($interval, appConfigurationService) {
+    module.directive('sentenceAnimationDirective', function ($interval, appConfigurationService) {
         return {
             restrict: 'E',
-            scope: { myNextTicket: '&', myTriggerAudio: '&'},
+            scope: { myNextSentence: '&', myTriggerAudio: '&' },
             link: function (scope, element, attr) {
 
                 var sliderRef;
@@ -18,7 +18,7 @@
                     }
                     else if (element.find('div.hiddenWord').css("opacity") == "1") {
                         element.find('div.hiddenWord').css("opacity", "0");
-                        scope.myNextTicket();
+                        scope.myNextSentence();
                     }
                 }
                 var stopSilde = function () {
