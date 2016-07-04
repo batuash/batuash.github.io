@@ -34,6 +34,10 @@ body {
     float: left;
 }
 
+.header-logo > a {
+    font-size: 16px;
+}
+
 .header-nav {
     float: right !important;
 }

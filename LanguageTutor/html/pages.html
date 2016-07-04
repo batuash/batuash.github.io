@@ -1,7 +1,6 @@
-﻿<div class="indexWrapper">
+﻿<div class="indexWrapper pagesWrapper">
     <ul class="list-group">
-        <!--<li class="list-group-item" ng-repeat="page in itemsCollection| limitTo:itemsPerPage:firstlabelsInNaviguation">-->
-        <li class="list-group-item" ng-repeat="page in itemsCollection">
+        <li class="list-group-item" ng-repeat="page in itemsCollection| limitTo:itemsPerPage:firstlabelsInNaviguation">
             <a href="#/sentences/{{dictionaryId}}/{{page.Id}}" class="listItem dictionaryBtn" ng-class="{underLinedTicket: intLastVisitedPageId == page.Id}">
                 {{page.Name}}
                 <span class="sideCaret">
@@ -10,5 +9,5 @@
             </a>
         </li>
     </ul>
-    <!--<pagination-directive></pagination-directive>-->
+    <pagination-directive></pagination-directive>
 </div>

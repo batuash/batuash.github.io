@@ -183,7 +183,7 @@
                 getTickets: getTickets,
                 getDictionary: getDictionary,
                 audioUrl: serviceUrl + '/Content/mp3/',
-                itemsPerPage: 5, //number of items shown in each page
+                itemsPerPage: 4, //number of items shown in each page
                 labelsInNaviguation: 3 //number of label(..1 2 3..) icons shown in the pager-naviguation
             };
         }
