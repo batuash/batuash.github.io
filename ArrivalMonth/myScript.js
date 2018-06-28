@@ -16,6 +16,8 @@ var houresToWork;
 var hoursMissing;
 var houresExtra;
 
+var baseUrl = 'http://batuash.github.io/ArrivalMonth';
+
 $(function() {
   init();
   initActions();
@@ -77,12 +79,12 @@ function initActions() {
 
 function loadPrevMonth() {
   var goToMonth = month - 1;
-  document.location.href = '../ArivalMonth/Main.html?month=' + goToMonth;
+  document.location.href = baseUrl + '/index.html?month=' + goToMonth;
 }
 
 function loadNextMonth() {
   var goToMonth = month + 1;
-  document.location.href = '../ArivalMonth/Main.html?month=' + goToMonth;
+  document.location.href = baseUrl + '/index.html?month=' + goToMonth;
 }
 
 function setItemClickAction() {
@@ -100,7 +102,8 @@ function setItemClickAction() {
       .find('.table-item-top')
       .text();
     document.location.href =
-      'http://batuash.github.io/ArrivalMonth/edit/index.html?day=' +
+      baseUrl +
+      '/edit/index.html?day=' +
       day +
       '&enter=' +
       enter +
