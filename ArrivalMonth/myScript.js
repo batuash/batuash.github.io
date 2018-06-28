@@ -88,10 +88,11 @@ function loadNextMonth() {
 }
 
 function setItemClickAction() {
+  // $('table tr td').on('click', function() {
+  //   editCell(this);
+  // });
+  // $('table tr td').on('dblclick', function() {
   $('table tr td').on('click', function() {
-    editCell(this);
-  });
-  $('table tr td').on('dblclick', function() {
     var enter = $(this)
       .find('.enterTime')
       .text();
@@ -118,10 +119,10 @@ function setItemClickAction() {
   });
 }
 
-function editCell(obj) {
-  $('table tr td').css('background-color', '#DAD9D7');
-  $(obj).css('background-color', '#A6C6EE');
-}
+// function editCell(obj) {
+//   $('table tr td').css('background-color', '#DAD9D7');
+//   $(obj).css('background-color', '#A6C6EE');
+// }
 
 function initHeaderTitle() {
   $('.mainHeader').html(
