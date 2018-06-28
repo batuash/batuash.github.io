@@ -1,0 +1,151 @@
+<!doctype>
+<html>
+<head>
+	<title>
+	</title>
+	<style>
+
+		body {
+			background-color: #bfd6e5;	
+		}
+		
+		.center-content {
+			margin: 0 auto;
+		}
+		header {
+			width: 578px;
+			height: 115px; 
+			background-color: #a6c6ee;
+		}
+		
+		header h1 {
+			padding-top: 35px;
+			text-align: center;
+			font: bold 30pt arial,sans-serif 
+		}
+		
+		#content {
+			width: 578px;
+			height: 425px; 
+			background-color: #fff;
+		}
+		
+		#content section {
+			width: 548px;
+			height: 291px; 
+			margin: 0 auto;
+			background-color: red;
+		}
+		
+		footer {
+			width: 578px;
+			height: 134px; 
+			background-color: #fff;
+		}
+		
+		table {
+			width: 100%;
+			height: 100%;
+			background-color: #dad9d7;
+			font: normal 24pt arial,sans-serif; 
+			color: #51534a ;
+		}
+		
+		.table-header {
+			background-color: #c8c8c8;
+		}
+		
+		table td,th {
+			width: 80px;
+			height: 60px;
+		}
+		
+		.table-item-top{
+			text-align: center;
+			position: relative;
+		}
+		
+		.table-item-bottom{
+			font: normal 9pt arial,sans-serif; 		
+			text-align: center;
+			position: relative;
+			bottom: 5px;
+			color: #435cc8;
+		}
+		
+		.item1 {
+			color: #435cc8;
+		}
+
+		.blurred-item, .blurred-item .table-item-bottom{
+			color: #bbbab0;
+		}	
+		
+		footer div {
+			position: relative;
+		}
+		
+		footer input{
+			position:absolute;
+			margin-top: 5px;
+			margin-left: 20px;
+			width: 166px;
+			height: 40px;
+			border: none;
+			border-radius: 8px;
+			background-color: #a6c6ee;
+			font: normal 20pt arial,sans-serif; 
+		}
+		
+		#enterBtn {
+			color: #0082ca;	
+			top: 20px;
+		}		
+		
+		#leaveBtn {
+			top: 75px;
+			color: #7b1d1d;
+		}	
+		
+		footer div input:hover {
+			border: 3px solid #448ccb;
+		}
+		footer div input:active {
+			border: 3px solid #0054a6;
+		}
+		
+		.info {
+			height: 96px;
+			width: 174px;
+			background-color: #dad9d7;
+			float:right;
+			margin: 18px 16px 0 0;
+			padding-left:10px;
+			border-radius: 10px;
+			border: 3px solid #b4b4b4;
+		}
+		
+		.info  p {
+			font: bold 10pt Tahoma,arial,sans-serif; 
+		}
+		
+		table tr {
+			border: 1px solid #555;
+		}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+	</script>
+	<script src="edit.js">
+	</script>	
+</head>
+<body>
+	<header class="center-content">
+		<h1 class="mainHeader"></h1>
+	</header>
+	<div id="content" class="center-content">
+		<div><label>Enter</label><input class="enterInpt" type="text"></input></div>
+		<div><label>Leave</label><input class="leaveInpt" type="text"></input></div>
+		<div><button id="actionBtn" value="update">update</button></div>
+	</div>
+</body>
+</html>

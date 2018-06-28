@@ -1,0 +1,32 @@
+V. hover and click animations for buttons
+2. bottm info: 
+info about the current month
+	- days worked
+	- days supposed to work
+	- hours worked
+	- hours supposed to work
+	- hours missing
+	- hours extra
+
+info about the current week
+	- hours worked
+	- hours supposed to work
+	- hours missing
+	- hours extra
+
+3. update manualy: 
+	- pop-up menu
+
+4. hover function to each item
+	- hours worked
+	- hours supposed to work
+	- hours missing
+	- hours extra
+
+5. header text:
+	- add 'th' to date
+	- put correct string  
+
+V. all days of the month are blured exept the current day 
+
+7.table should not show empty rows and cells.
