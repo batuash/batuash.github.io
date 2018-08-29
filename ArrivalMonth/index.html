@@ -6,85 +6,90 @@
 	<style>
 
 		body {
-			background-color: #bfd6e5;	
+			background-color: #bfd6e5;
 		}
-		
+
 		.center-content {
 			margin: 0 auto;
 		}
 		header {
 			width: 578px;
-			height: 115px; 
+			height: 115px;
 			background-color: #a6c6ee;
 		}
-		
+
 		header h1 {
 			padding-top: 35px;
 			text-align: center;
-			font: bold 30pt arial,sans-serif 
+			font: bold 30pt arial,sans-serif
 		}
-		
+
 		#content {
 			width: 578px;
-			height: 425px; 
+			height: 425px;
 			background-color: #fff;
 		}
-		
+
 		#content section {
 			width: 548px;
-			height: 291px; 
+			height: 291px;
 			margin: 0 auto;
 			background-color: red;
 		}
-		
+
 		footer {
 			width: 578px;
-			height: 134px; 
+			height: 134px;
 			background-color: #fff;
 		}
-		
+
 		table {
 			width: 100%;
 			height: 100%;
 			background-color: #dad9d7;
-			font: normal 24pt arial,sans-serif; 
+			font: normal 24pt arial,sans-serif;
 			color: #51534a ;
 		}
-		
+
 		.table-header {
 			background-color: #c8c8c8;
 		}
-		
+
 		table td,th {
 			width: 80px;
 			height: 60px;
 		}
-		
+
 		.table-item-top{
 			text-align: center;
 			position: relative;
 		}
-		
+
 		.table-item-bottom{
-			font: normal 9pt arial,sans-serif; 		
+			font: normal 9pt arial,sans-serif;
 			text-align: center;
 			position: relative;
 			bottom: 5px;
 			color: #435cc8;
 		}
-		
+
+		.hoursDone{
+			font-size: 10px;
+	    color: cadetblue;
+		}
+
 		.item1 {
 			color: #435cc8;
 		}
 
 		.blurred-item, .blurred-item .table-item-bottom{
 			color: #bbbab0;
-		}	
-		
+		}
+
 		footer div {
 			position: relative;
 		}
-		
+
 		footer input{
 			position:absolute;
 			margin-top: 5px;
@@ -94,26 +99,26 @@
 			border: none;
 			border-radius: 8px;
 			background-color: #a6c6ee;
-			font: normal 20pt arial,sans-serif; 
+			font: normal 20pt arial,sans-serif;
 		}
-		
+
 		#enterBtn {
-			color: #0082ca;	
+			color: #0082ca;
 			top: 20px;
-		}		
-		
+		}
+
 		#leaveBtn {
 			top: 75px;
 			color: #7b1d1d;
-		}	
-		
+		}
+
 		footer div input:hover {
 			border: 3px solid #448ccb;
 		}
 		footer div input:active {
 			border: 3px solid #0054a6;
 		}
-		
+
 		.info {
 			height: 96px;
 			width: 174px;
@@ -124,15 +129,15 @@
 			border-radius: 10px;
 			border: 3px solid #b4b4b4;
 		}
-		
+
 		.info  p {
-			font: bold 10pt Tahoma,arial,sans-serif; 
+			font: bold 10pt Tahoma,arial,sans-serif;
 		}
-		
+
 		table tr {
 			border: 1px solid #555;
 		}
-		
+
 		header .prev {
 			height: 26px;
 			width: 39px;
@@ -140,8 +145,8 @@
 			position: absolute;
 			top: 45px;
 			left: 55px;
-		} 
-		
+		}
+
 		header .next {
 			height: 26px;
 			width: 39px;
@@ -149,16 +154,16 @@
 			position: absolute;
 			top: 46px;
 			right: 55px;
-		} 
-		
+		}
+
 		header .prev:hover {
 			background-image: url('images/prevImageHovered.png');
-		} 
-		
+		}
+
 		header .next:hover {
 			background-image: url('images/nextImageHovered.png');
-		} 
-		
+		}
+
 		header .header-container{
 			position: relative;
 		}
@@ -166,7 +171,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 	</script>
 	<script src="myScript.js">
-	</script>	
+	</script>
 </head>
 <body>
 	<header class="center-content">
@@ -186,181 +191,181 @@
 				<tr id="table-row-1">
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>					
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>	
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>					
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>		
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>						
-				</tr>	
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
+				</tr>
 				<tr id="table-row-2">
-					<td> 
+					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>					
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>	
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
-						<div class="table-item-bottom"></div>	
-					</td>					
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>		
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>						
-				</tr>	
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
+				</tr>
 				<tr id="table-row-3">
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>					
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>	
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
-						<div class="table-item-bottom"></div>	
-					</td>					
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>		
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>						
-				</tr>	
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
+				</tr>
 				<tr id="table-row-4">
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td >
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>					
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>	
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
-						<div class="table-item-bottom"></div>	
-					</td>					
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>		
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>						
-				</tr>	
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
+				</tr>
 				<tr id="table-row-5">
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td >
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>					
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>	
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
-						<div class="table-item-bottom"></div>	
-					</td>					
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>		
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>						
-				</tr>	
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
+				</tr>
 				<tr id="table-row-6">
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td >
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>					
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>	
-					<td>
-						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
+						<div class="table-item-bottom"></div>
 					</td>
 					<td>
-						<div class="table-item-bottom"></div>	
-					</td>					
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>		
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-bottom"></div>
+					</td>
 					<td>
 						<div class="table-item-top"></div>
-						<div class="table-item-bottom"></div>	
-					</td>						
-				</tr>					
+						<div class="table-item-bottom"></div>
+					</td>
+					<td>
+						<div class="table-item-top"></div>
+						<div class="table-item-bottom"></div>
+					</td>
+				</tr>
 				<tr></tr>
 				<tr></tr>
-		</table>	
+		</table>
 		</section>
 		<div class="next"> </div>
 	</div>
@@ -376,7 +381,7 @@
 				Hours Missing: <span id="hMissing">5</span><br/>
 				Hours Extra: <span id="hExtra">0</span>
 			</p>
-		</div>		
+		</div>
 		</footer>
 </body>
 </html>

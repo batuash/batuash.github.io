@@ -16,6 +16,8 @@ var houresToWork;
 var hoursMissing;
 var houresExtra;
 
+var lunchBreak;
+
 var baseUrl = 'http://batuash.github.io/ArrivalMonth';
 
 $(function() {
@@ -38,6 +40,7 @@ function init() {
   day = date.getDate();
   month = date.getMonth();
   year = date.getFullYear();
+  lunchBreak = 0.5;
 
   var paramMonth = getUrlVars()['month'];
   if (typeof paramMonth != 'undefined') {
@@ -204,6 +207,7 @@ function refreshTable() {
     counter++, i++, dayOfMonth++
   ) {
     var todayDate = counter - firsttDayOfTheMonth + 2;
+    var hoursDone = caculateHoursDone(datalist[i].enter, datalist[i].leave) || null;
     if (counter > firsttDayOfTheMonth - 2 && !isWeekendDay(dayOfMonth)) {
       $('td:eq(' + counter + ')').empty();
       $('td:eq(' + counter + ')').html(
@@ -213,7 +217,9 @@ function refreshTable() {
           datalist[i].enter +
           '</span> - <span class="leaveTime">' +
           datalist[i].leave +
-          '<span/></div>'
+          '</span>' +
+          '<br/><span class="hoursDone">' + hoursDone + ' hours</span>' +
+        '</div>'
       );
       dayesToWork++;
     }
@@ -263,6 +269,10 @@ function updateInfoData() {
 }
 
 function caculateHoursDone(start, end) {
+  if(!start || !end) {
+    return
+  }
+
   var startArr = start.split(':');
   var endArr = end.split(':');
   var startH = parseInt(startArr[0]);
@@ -280,7 +290,7 @@ function caculateHoursDone(start, end) {
   }
   resM = resM != 0 ? resM / 60 : resM;
 
-  res = resH + resM;
+  res = resH + resM - lunchBreak;
 
   return parseFloat(res.toFixed(2));
 }
