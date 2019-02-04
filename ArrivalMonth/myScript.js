@@ -17,6 +17,7 @@ var hoursMissing;
 var houresExtra;
 
 var lunchBreak;
+var reportMode = false;
 
 var baseUrl = 'http://batuash.github.io/ArrivalMonth';
 
@@ -44,7 +45,12 @@ function init() {
 
   var paramMonth = getUrlVars()['month'];
   if (typeof paramMonth != 'undefined') {
-    month = parseInt(paramMonth);
+    var newMonth = parseInt(paramMonth);
+    if(month != newMonth) {
+        reportMode = true;
+        currentDayDate = 31; // show all days
+        month = parseInt(paramMonth);
+    }
   }
 
   //constats:
@@ -235,7 +241,7 @@ function refreshTable() {
 function isWeekendDay(day) {
   var saturday = day % 7 == 0;
   var sunday = day % 7 == 1;
-  return saturday || sunday;
+  return (saturday || sunday) && !reportMode;
 }
 
 function updateInfo() {
@@ -316,6 +322,10 @@ function refreshInfo() {
 }
 
 function getFirstDayOfTheMonth() {
+  if(reportMode) {
+      return 1;
+  }
+
   var day = currentDay;
   var temp = currentDayDate % 7 - day;
   var res = (8 - temp) % 7;
