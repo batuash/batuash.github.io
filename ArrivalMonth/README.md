@@ -1,4 +1,3 @@
-Arrival Month
-===========================
+# Arrival Month
 
-> A tool to calculate working hours at work
+> A simple tool to calculate working hours at work
